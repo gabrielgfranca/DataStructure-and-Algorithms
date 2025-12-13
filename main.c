@@ -1,19 +1,30 @@
 #include <stdio.h>
 #include "Array/array.h"
+#include "Stack/stack.h"
 
 int main(void) {
-    int array[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-    int length = sizeof(array) / sizeof(array[0]);
+    Stack stack;
+    createStack(&stack);
 
-    for (int i = 0; i < length; i++) {
-        printf("%d", array[i]);
-    }
+    stackPush(&stack, 10);
+    stackPush(&stack, 20);
+    stackPush(&stack, 30);
+    stackPush(&stack, 40);
 
-    length = remove_at(array, 10, length, 3);
+    printStack(&stack);
+    stackPop(&stack);
 
-    printf("---");
+    printStack(&stack);
+    stackPop(&stack);
 
-    for (int i = 0; i < length; i++) {
-        printf("%d", array[i]);
-    }
+    printStack(&stack);
+    stackPop(&stack);
+
+    printStack(&stack);
+    stackPop(&stack);
+
+    printStack(&stack);
+    stackPop(&stack);
+
+    printStack(&stack);
 }
