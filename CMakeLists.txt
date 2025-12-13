@@ -3,4 +3,7 @@ project(DataStructure_and_Algorithms C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_library(DataStructure_and_Algorithms STATIC main.c)
+add_executable(
+        Main main.c
+        Array/array.c
+)
