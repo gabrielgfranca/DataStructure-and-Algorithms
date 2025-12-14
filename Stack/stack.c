@@ -35,7 +35,7 @@ bool isFull(Stack *stack) {
     return stack->size == MAX_SIZE ? true : false;
 }
 
-void stackPush(Stack *stack, int data) {
+void push(Stack *stack, int data) {
     if (isFull(stack)) {
         printf("Stack Overflow\n");
         return;
@@ -44,7 +44,7 @@ void stackPush(Stack *stack, int data) {
     stack->size++;
 }
 
-int stackPop(Stack *stack) {
+int pop(Stack *stack) {
     if (isEmpty(stack)) {
         printf("Stack Underflow\n");
         return -1;
