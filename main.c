@@ -1,30 +1,22 @@
 #include <stdio.h>
-#include "Array/array.h"
-#include "Stack/stack.h"
+#include "Queue/queue.h"
 
 int main(void) {
-    Stack stack;
-    createStack(&stack);
+    Queue queue;
+    createQueue(&queue);
 
-    stackPush(&stack, 10);
-    stackPush(&stack, 20);
-    stackPush(&stack, 30);
-    stackPush(&stack, 40);
+    enqueue(&queue, 10);
+    enqueue(&queue, 20);
+    enqueue(&queue, 30);
+    enqueue(&queue, 40);
+    enqueue(&queue, 50);
 
-    printStack(&stack);
-    stackPop(&stack);
+    printQueue(&queue);
 
-    printStack(&stack);
-    stackPop(&stack);
+    dequeue(&queue);
+    dequeue(&queue);
 
-    printStack(&stack);
-    stackPop(&stack);
+    enqueue(&queue, 60);
 
-    printStack(&stack);
-    stackPop(&stack);
-
-    printStack(&stack);
-    stackPop(&stack);
-
-    printStack(&stack);
+    printQueue(&queue);
 }
