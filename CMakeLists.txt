@@ -11,4 +11,6 @@ add_executable(
         Stack/stack.h
         Queue/queue.c
         Queue/queue.h
+        Deque/deque.c
+        Deque/deque.h
 )
