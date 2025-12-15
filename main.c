@@ -1,22 +1,21 @@
 #include <stdio.h>
-#include "Queue/queue.h"
+#include "Deque/deque.h"
 
 int main(void) {
-    Queue queue;
-    createQueue(&queue);
+    Deque deque;
+    createDeque(&deque);
 
-    enqueue(&queue, 10);
-    enqueue(&queue, 20);
-    enqueue(&queue, 30);
-    enqueue(&queue, 40);
-    enqueue(&queue, 50);
+    addFront(&deque, 1);   // [1]
+    addBack(&deque, 3);    // [1,3]
+    addFront(&deque, 0);   // [0,1,3]
+    printDeque(&deque);        // 0 1 3
 
-    printQueue(&queue);
+    printf("peekFront: %d\n", peekFront(&deque));  // 0
+    printf("peekBack: %d\n", peekBack(&deque));    // 3
 
-    dequeue(&queue);
-    dequeue(&queue);
+    printf("removeFront: %d\n", removeFront(&deque));  // 0
+    printf("removeBack: %d\n", removeBack(&deque));    // 3
 
-    enqueue(&queue, 60);
-
-    printQueue(&queue);
+    printDeque(&deque);  // 1
+    return 0;
 }
