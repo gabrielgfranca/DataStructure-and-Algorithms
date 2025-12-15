@@ -12,12 +12,12 @@ typedef struct Stack {
 } Stack;
 
 void createStack(Stack *stack);
-bool isEmpty(Stack *stack);
-bool isFull(Stack *stack);
-void push(Stack *stack, int data);
-int pop(Stack *stack);
-int peek(Stack *stack);
-void clear(Stack *stack);
+bool stack_isEmpty(Stack *stack);
+bool stack_isFull(Stack *stack);
+void stack_push(Stack *stack, int data);
+int stack_pop(Stack *stack);
+int stack_peek(Stack *stack);
+void stack_clear(Stack *stack);
 void printStack(Stack *stack);
 
 #endif

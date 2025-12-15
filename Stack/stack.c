@@ -27,16 +27,16 @@ void createStack(Stack *stack) {
     stack->size = 0;
 }
 
-bool isEmpty(Stack *stack) {
+bool stack_isEmpty(Stack *stack) {
     return stack->size == 0 ? true : false;
 }
 
-bool isFull(Stack *stack) {
+bool stack_isFull(Stack *stack) {
     return stack->size == MAX_SIZE ? true : false;
 }
 
-void push(Stack *stack, int data) {
-    if (isFull(stack)) {
+void stack_push(Stack *stack, int data) {
+    if (stack_isFull(stack)) {
         printf("Stack Overflow\n");
         return;
     }
@@ -44,8 +44,8 @@ void push(Stack *stack, int data) {
     stack->size++;
 }
 
-int pop(Stack *stack) {
-    if (isEmpty(stack)) {
+int stack_pop(Stack *stack) {
+    if (stack_isEmpty(stack)) {
         printf("Stack Underflow\n");
         return -1;
     }
@@ -55,7 +55,7 @@ int pop(Stack *stack) {
     return popData;
 }
 
-int peek(Stack *stack) {
+int stack_peek(Stack *stack) {
     if (isEmpty(stack)) {
         printf("Stack is empty\n");
         return -1;
@@ -63,7 +63,7 @@ int peek(Stack *stack) {
     return stack->array[stack->top];
 }
 
-void clear(Stack *stack) {
+void stack_clear(Stack *stack) {
     if (isEmpty(stack)) {
         printf("Stack is empty\n");
         return;
