@@ -9,4 +9,6 @@ add_executable(
         Array/array.h
         Stack/stack.c
         Stack/stack.h
+        Queue/queue.c
+        Queue/queue.h
 )
