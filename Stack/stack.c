@@ -56,7 +56,7 @@ int stack_pop(Stack *stack) {
 }
 
 int stack_peek(Stack *stack) {
-    if (isEmpty(stack)) {
+    if (stack_isEmpty(stack)) {
         printf("Stack is empty\n");
         return -1;
     }
@@ -64,7 +64,7 @@ int stack_peek(Stack *stack) {
 }
 
 void stack_clear(Stack *stack) {
-    if (isEmpty(stack)) {
+    if (stack_isEmpty(stack)) {
         printf("Stack is empty\n");
         return;
     }
@@ -73,7 +73,7 @@ void stack_clear(Stack *stack) {
 }
 
 void printStack(Stack *stack) {
-    if (isEmpty(stack)) {
+    if (stack_isEmpty(stack)) {
         printf("Stack is empty\n");
         return;
     }
