@@ -1,5 +1,5 @@
 // Adding an element at the end of the array
-int push(int array[], int capacity, int length, int element) {
+int array_push(int array[], int capacity, int length, int element) {
     if (length >= capacity) return length;
     array[length] = element;
     return length + 1;
@@ -26,7 +26,7 @@ int unshift(int array[], int capacity, int length, int element) {
 }
 
 // Removing an element at the end of the array
-int pop(int array[], int length) {
+int array_pop(int array[], int length) {
     if (length <= 0) return length;
     for (int i = 0; i < length - 1; i++) {
         array[i] = array[i + 1];
